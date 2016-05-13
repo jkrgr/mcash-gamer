@@ -1,0 +1,113 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>mCASH Gamer</title>
+        <link rel="shortcut icon" href="/static/images/favicon.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.deep_orange-blue.min.css"/> -->
+        <!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.lime-blue.min.css" /> -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.1.2/material.deep_orange-green.min.css" />
+        <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+        <!-- Square card -->
+        <style>
+        body {
+            background-image: url('http://wallup.net/wp-content/uploads/2016/01/218482-Metal_Gear_Solid-soldier-video_games-PC_gaming-military.jpg');
+        }
+        .mdl-selectfield {
+            font-family: 'Roboto','Helvetica','Arial',sans-serif;
+            position: relative;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        /* standard select styling */
+        select {
+            background: #fff url("http://punkchip.com/images/select-arrows.png") no-repeat 100% 50%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 0.5em 0.75em;
+            -webkit-appearance: button;
+            font-family: 'Roboto','Helvetica','Arial',sans-serif;
+            font-size: 17px;
+            font-weight: 300;
+            color: grey;
+            width: 100%;
+        }
+        option {
+            font-size: 17px;
+            font-weight: 300;
+            color: grey;
+        }
+
+        /* remove arrows from Firefox */
+        @-moz-document url-prefix() {
+          .select-wrap {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            display: inline-block;
+            position: relative;
+          }
+          .select-wrap:before {
+            content: " ";
+            background: transparent url("http://punkchip.com/images/select-arrows.png") no-repeat 50% 50%;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 20px;
+            height: 15px;
+            margin-top: -8px;
+            display: inline-block;
+            pointer-events: none;
+          }
+
+          select {
+            -moz-appearance: treeitem;
+          }
+        }
+        /* remove arrows from IE10 */
+        select::-ms-expand {
+          display: none;
+        }
+
+        .card-square.mdl-card {
+            margin: auto;
+            margin-top: 100px;
+            width: 400px;
+        }
+        .card-square > .mdl-card__title {
+        color: #fff ;
+        background:
+            url('../assets/demos/dog.png') bottom right 15% no-repeat rgb(244, 130 ,35);
+        }
+        .button {
+            margin-top: 20px;
+        }
+
+        .game-form-element{
+          margin: 0 auto !important;
+          width: 100% !important;
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="mdl-grid">
+
+            <div class="mdl-cell mdl-cell--12-col">
+
+                {% block content %}
+                {% endblock %}
+
+            </div>
+        </div>
+    </body>
+</html>
